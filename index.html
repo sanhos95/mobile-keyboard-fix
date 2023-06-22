@@ -13,3 +13,47 @@
     <footer><input id="y" type="input" style="width: 100%;"></footer>
 </body>
 </html>
+<style>
+    header{
+        height: 50px;
+        background-color: aqua;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    main{
+        height: 100%;
+        width: 100%;
+    }
+    footer{
+        height: 80px;
+        /* background-color: aqua; */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .link1{
+        height: 80px;
+        background-color: rgb(60, 255, 0);
+        z-index: 1;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+    }
+    .scroll{
+        margin-bottom: 380px;
+    }
+</style>
+
+<script>
+document.getElementsByClassName('link1')[0].addEventListener('click', function(event) {
+	event.preventDefault();
+    event.target.classList.add('scroll');
+  document.getElementsByClassName('link2')[0].focus().click();
+
+});
+
+
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
